@@ -5,18 +5,18 @@ const createError = require('http-errors');
 
 const bodyParser = require('body-parser');
 
-const FeedbackService = require(path.join(__dirname, './services/FeedbackService'));
-const SpeakersService = require(path.join(__dirname, './services/SpeakerService'));
+const FeedbackService = require('./services/FeedbackService');
+const SpeakersService = require('./services/SpeakerService');
 
-const feedbackService = require(path.join(__dirname, './data/feedback.json'));
-const speakersService = require(path.join(__dirname, './data/speakers.json'));
+const feedbackService = new FeedbackService(path.join(__dirname, './data/feedback.json'));
+const speakersService = new SpeakersService(path.join(__dirname,'./data/speakers.json'));
 
-const routes = require(path.join(__dirname, './routes'));
 
+const routes = require('./routes');
 
 const app = express();
 
-app.locals.siteName = 'FreeMind Academy';
+app.locals.siteName = 'ROUX Academy';
 
 const port = 3000;
 
