@@ -2,7 +2,7 @@
   "name": "roux-academy",
   "version": "1.0.0",
   "description": "Exercise files for my course Building a Website with Node.js and Express",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon --ignore feedback.json index.js"
